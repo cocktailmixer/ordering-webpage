@@ -1,0 +1,24 @@
+@import './vars';
+
+.App {
+  margin: $gap;
+  padding: $gap;
+  border: 1px solid $orange;
+
+  .cocktailList {
+    display: grid;
+    grid-gap: $gap;
+    $cocktailMenuItemSize: 250px;
+    grid-template-columns: repeat(auto-fit, $cocktailMenuItemSize);
+    grid-auto-rows: $cocktailMenuItemSize;
+    justify-content: center;
+  }
+
+  > h1 {
+    text-align: center;
+    font-family: $fancyFont;
+    font-size: 40px;
+    color: $orange;
+    margin: 20px 0 40px;
+  }
+}

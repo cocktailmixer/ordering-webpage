@@ -1,0 +1,11 @@
+@import '../vars';
+
+.CocktailMenuItem {
+  background-size: cover;
+  .name {
+    font-family: $fancyFont;
+    background: transparentize($color: $black, $amount: 0.5);
+    padding: 6px 12px;
+    font-size: 24px;
+  }
+}

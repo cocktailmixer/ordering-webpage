@@ -4,6 +4,8 @@
   margin: $gap;
   padding: $gap;
   border: 1px solid $orange;
+  min-height: calc(100vh - 2 * #{$gap});
+  box-sizing: border-box;
 
   .cocktailList {
     display: grid;
@@ -14,10 +16,10 @@
     justify-content: center;
   }
 
-  > h1 {
+  > header > h1 {
     text-align: center;
     font-family: $fancyFont;
-    font-size: 40px;
+    font-size: 30px;
     color: $orange;
     margin: 20px 0 40px;
   }

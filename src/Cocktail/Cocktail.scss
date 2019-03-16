@@ -1,0 +1,20 @@
+@import '../vars';
+
+.Cocktail {
+  color: $white;
+  h1 {
+    font-family: $fancyFont;
+    font-size: 40px;
+  }
+  h2 {
+    font-size: 30px;
+    font-weight: normal;
+    font-variant: small-caps;
+  }
+  .measure {
+    font-style: italic;
+  }
+  img {
+    max-width: 100%;
+  }
+}

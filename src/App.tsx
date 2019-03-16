@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import Cocktail from './Cocktail/Cocktail';
 import CocktailMenuItem from './Cocktail/CocktailMenuItem';
 import './App.scss';
 import { CocktailRecipe } from './Cocktail/model';
@@ -55,12 +56,28 @@ class App extends Component<{}, IAppState> {
     return (
       <Router>
         <div className="App">
-          <h1>Cocktail Mixer</h1>
-          <div className="cocktailList">
-            {cocktails.map(cocktail => (
-              <CocktailMenuItem key={cocktail.id} cocktail={cocktail} />
-            ))}
-          </div>
+          <header>
+            <h1>Cocktail Mixer</h1>
+          </header>
+          <Route
+            path="/"
+            exact
+            render={props => (
+              <div className="cocktailList">
+                {cocktails.map(cocktail => (
+                  <CocktailMenuItem key={cocktail.id} cocktail={cocktail} />
+                ))}
+              </div>
+            )}
+          />
+          <Route
+            path="/cocktail/:cocktailId"
+            render={({
+              match: {
+                params: { cocktailId }
+              }
+            }) => <Cocktail cocktailId={cocktailId} />}
+          />
         </div>
       </Router>
     );

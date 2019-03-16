@@ -2,6 +2,8 @@
 
 .CocktailMenuItem {
   background-size: cover;
+  color: $white;
+  text-decoration: none;
   .name {
     font-family: $fancyFont;
     background: transparentize($color: $black, $amount: 0.5);
